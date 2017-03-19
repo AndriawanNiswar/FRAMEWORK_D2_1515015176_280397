@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class BuatTablePengguna extends Migration
+class BuatTableMahasiswa extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,8 @@ class BuatTablePengguna extends Migration
      */
     public function up()
     {
-        Schema::create('pengguna', function (Blueprint $table) {
+        Schema::create('mahasiswa', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('username');
-            $table->rememberToken();
             $table->timestamps();
         });
     }
@@ -27,6 +25,6 @@ class BuatTablePengguna extends Migration
      */
     public function down()
     {
-        Schema::drop('pengguna');
+        Schema::drop('mahasiswa');
     }
 }
