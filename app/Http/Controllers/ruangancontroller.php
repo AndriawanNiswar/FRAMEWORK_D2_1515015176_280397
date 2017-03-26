@@ -6,25 +6,52 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\ruangan;
+
 class ruangancontroller extends Controller
 {
      public function awal()
     {
-    	return "hello dari ruangan";
+    	return 'ruangan awal',{'data'=>ruangan::all()]);
     }
     public function tambah()
     {
-    	return $this->simpan();
+    	return view('ruangan tambah');
     }
-    public function simpan()
+    public function simpan(Requests $input)
     {
     	$ruangan = new ruangan();
-    	$ruangan->id = '1';
-    	$ruangan->save();
-    	return "data dengan username {$ruangan->id} telah disimpan";
+    	$ruangan->title = $input->title;
+    	$informasi = $ruangan->save() ? 'Berhasil simpan data' : 'Gagal simpan data';
+    	return redirect('ruangan')->with(['informasi=>$informasi']); 
+    }
+    public function edit($id)
+    {
+        $ruangan = ruangan::find($id);
+        return view('ruangan edit')->with(array('ruangan'=>$ruangan));
+    }
+    public function lihat($id)
+    {
+        $ruangan = ruangan::find($id);
+        return view('ruangan lihat')->with(array('ruangan'=>$ruangan));
+    }
+    public function update($id, Request $input)
+    {
+        $ruangan = ruangan::find($id);
+        $ruangan->title = $input->title;
+        $informasi = $ruangan->save() ? 'Berhasil update data' : 'Gagal update data';
+        return redirect('ruangan')->with(['informasi'=>$informasi]);
+    }
+    public function hapus($id)
+    {
+        $ruangan = ruangan::find($id);
+        $informasi = $ruangan->delete() ? 'Berhasil hapus data' : 'Gagal hapus data';
+        return redirect ('ruangan')->wiith(['informasi=>$informasi']);
+    
+    
 
     }
 }
+
 
 
 
