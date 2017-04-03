@@ -3,26 +3,27 @@
 <head>
 	<meta charset="UTF-8">
 	<title>@yield('page_title','halaman awal') | Laboratorium Pemograman FW</title>
-	<link rel="stylesheet" type="text/css"
-	href="{{asset('componet/bootstrap/dist/css/bootstrap.min.css')}}">
+	<link rel="stylesheet" type="text/css"href="{{asset('componet/bootstrap/dist/css/bootstrap.min.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{asset('component/font-awesome/css/font-awesome.min.css')}}">
-	style type="text/css">
-	body {
-		padding-top: 70px;
-		padding-bottom: 70px;
-		}
-		.starter-template {
-			padding: 40px 15px;
-			text-align: center;
-		}
-		.form-horizontal{
-			padding-top: 15px 10px;
-			}
-			footer{
-				padding-top: 15px;
-				text-align: right;
-            }
+	
+ <style type="text/css">
+                body {
+                        padding-top: 70px;
+                        padding-bottom: 70px;
+                }
+                .starter-template {
+                    padding: 40px 15px;
+                    text-align: center;
+                }
+                .form-horizontal{
+                    padding-top: 15px 10px;
+                }
+                footer{
+                    padding-top: 15px;
+                    text-align: right;
+                }
         </style>
+
     </head>
 <body>
 	  <nav class="navbar navbar-default navbar-fixed-top">
@@ -74,7 +75,7 @@
 	  											</div>
 	  											<nav class="navbar navbar-default navbar-fixed-bottom">
 	  											<footer class="container">
-	  												<!-- please dont delete this --> created by <a href="http://twitter.com/triasbrata"><span><i class="fa fa-twitter" style="color:#1da1f2"></i> @triasbrata</span></a>
+	  												<!-- please dont delete this --> created by <a href="http://twitter.com/triasbrata"><span><i class="fa fa-twitter" style="color:#1da1f2"></i> @AndriawanNiswar</span></a>
 	  												<!--/ please dont delete this --> </footer>
 	  												</nav>
 	  												<script type="text/javascript" src="{{asset('component/jquery/dist/jquery.min.js') }}"></script>
@@ -87,6 +88,4 @@
 	  													</body>
 	  												
                                           
-		}
-		}
-	}
+		

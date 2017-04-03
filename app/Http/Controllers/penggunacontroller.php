@@ -50,5 +50,4 @@ class penggunacontroller extends Controller
     	return redirect('pengguna')->with(['informasi'=>$informasi]);
     }
 
-    }
 }

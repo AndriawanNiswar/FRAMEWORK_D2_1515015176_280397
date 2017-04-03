@@ -23,14 +23,13 @@
 //Route::get('kelasd2/{$mhs?}', function ($mhs="Anonim") {
     //return "Selamat Datang $mhs";
 
-Route::get('pengguna','penggunacontroller@awal');
-Route::get('pengguna/tambah','penggunacontroller@tambah');
-Route::get('pengguna','pengguna@tambah');
-Route::get('pengguna/{pengguna}','penggunacontroller@lihat');
-Route::post('pengguna/simpan','penggunacontroller@simpan');
-Route::get('pengguna/edit/{pengguna}','penggunacontroller@edit');
-Route::post('pengguna/edit/{pengguna}','penggunacontroller@update');
-Route::get('pengguna/hapus/{pengguna}','penggunacontroller@hapus');
+Route::get('pengguna','PenggunaController@awal');
+Route::get('pengguna/tambah','PenggunaController@tambah');
+Route::get('pengguna/{pengguna}','PenggunaController@lihat');
+Route::post('pengguna/simpan','PenggunaController@simpan');
+Route::get('pengguna/edit/{pengguna}','PenggunaController@edit');
+Route::post('pengguna/edit/{pengguna}','PenggunaController@update');
+Route::get('pengguna/hapus/{pengguna}','PenggunaController@hapus');
 
 Route::get('dosen','dosencontroller@awal');
 Route::get('dosen/tambah','dosencontroller@tambah');
