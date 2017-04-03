@@ -19,7 +19,7 @@ class mahasiswa extends Model
 	return $this->pengguna->username;
 	}
 
-	public function listMahasiswaDanNim()
+	public function listmahasiswaDannim()
 	{
 		$out = [];
 		foreach ($this->all() as $mhs) {
@@ -30,7 +30,7 @@ class mahasiswa extends Model
 
 	public function jadwal_matakuliah()
     {
-        return $this->hasMany(Jadwal_Matakuliah::class);
+        return $this->hasMany(jadwal_matakuliah::class);
     }
 
 }
